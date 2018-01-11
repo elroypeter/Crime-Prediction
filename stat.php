@@ -2,20 +2,12 @@
 
 $dbhandle = new mysqli('localhost','root','','crime_prediction');
 echo $dbhandle->connect_error;
-//testing only
 $query = "SELECT year, totalcrime FROM crime_data_by_year order by year asc " ;
-//replace with it
-//$query = "SELECT year,crimeno FROM crime_records order by year Asc";
-
 $res = $dbhandle->query($query);
 
 ?>
-
-
-
 <html>
-  <head>
-
+<head>
 <title>Crime Prediction Tool</title>
 <!-- Latest compiled and minified CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
